@@ -26,7 +26,8 @@ Namemes::~Namemes(){}
 
 StepAction::StepAction(EventAction *_event) : event(_event) {}
 
-void StepAction::UserSteppingAction(const G4Step *pName) {
+void StepAction::UserSteppingAction(const G4Step *step) {
+    step=pName;
 
 }
 

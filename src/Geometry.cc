@@ -14,6 +14,7 @@
 #include <G4LogicalVolumeStore.hh>
 #include <G4SolidStore.hh>
 #include <G4PhysicalVolumeStore.hh>
+#include <G4RunManager.hh>
 
 
 G4VPhysicalVolume *Geometry::Construct() {
@@ -53,6 +54,8 @@ void Sizemes::SetNewSizeValue(G4UIcommand* cmd1, G4String nbox_size){
 
 void Geometry::SizeVal(G4double sizeval){
     box_size = sizeval;
+    G4RunManager::GetRunManager()->DefineWorldVolume(Construct());
+    G4RunManager::GetRunManager()->ReinitializeGeometry();
 }
 Sizemes::~Sizemes(){}
 Matmes::Matmes(Geometry* cls2):Matmesclass(cls2) {
@@ -67,6 +70,8 @@ void Matmes::SetNewMatValue(G4UIcommand* cmd2, G4String nmName){
 }
 void Geometry::MatVal(G4String matval){
     mName = matval;
+    G4RunManager::GetRunManager()->DefineWorldVolume(Construct());
+    G4RunManager::GetRunManager()->ReinitializeGeometry();
 }
 
 Matmes::~Matmes(){
