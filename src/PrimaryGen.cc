@@ -23,7 +23,7 @@ Vectormes::Vectormes(PrimaryGen* cls5):Vectormesclass(cls5) {
     myDir = new G4UIdirectory (" my_dir/");
     newVectorVal= new G4UIcommand (" my_dir/set_new_vector", this);
 }
-void Vectormes::SetNewVector(G4UIcommand* cmd5, G4String npos_vect){
+void Vectormes::SetNewValue(G4UIcommand* cmd5, G4String npos_vect){
     if (cmd5 == newVectorVal){
         Vectormesclass->NewVector(newVectorVal->ConvertTo3Vector(npos_vect));
     }

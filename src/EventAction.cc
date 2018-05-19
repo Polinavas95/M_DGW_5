@@ -14,7 +14,7 @@ Pormes::Pormes(EventAction* cls4):Pormesclass(cls4) {
     newPorVal = new G4UIcmdWithADouble (" my_dir/set_new_porog", this);
 }
 
-void Pormes::NewPorVal(G4UIcommand* cmd4, G4String nThreshold){
+void Pormes::SetNewValue(G4UIcommand* cmd4, G4String nThreshold){
     if (cmd4 == newPorVal){
         Pormesclass->Porval(newPorVal -> GetNewDoubleValue(nThreshold));
     }

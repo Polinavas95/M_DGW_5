@@ -46,7 +46,7 @@ Sizemes::Sizemes(Geometry* cls1):Sizemesclass(cls1) {
     myDir = new G4UIdirectory (" my_dir/");
     newSizeVal = new G4UIcmdWithADouble (" my_dir/set_new_size", this);
 }
-void Sizemes::SetNewSizeValue(G4UIcommand* cmd1, G4String nbox_size){
+void Sizemes::SetNewValue(G4UIcommand* cmd1, G4String nbox_size){
     if (cmd1 == newSizeVal){
         Sizemesclass->SizeVal(newSizeVal -> GetNewDoubleValue(nbox_size));
     }
@@ -63,7 +63,7 @@ Matmes::Matmes(Geometry* cls2):Matmesclass(cls2) {
     newMatVal = new G4UIcommand (" my_dir/set_new_material", this);
 }
 
-void Matmes::SetNewMatValue(G4UIcommand* cmd2, G4String nmName){
+void Matmes::SetNewValue(G4UIcommand* cmd2, G4String nmName){
     if (cmd2 == newMatVal){
         Matmesclass->MatVal(newMatVal ->CategoryOf(nmName));
     }

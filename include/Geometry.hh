@@ -34,7 +34,7 @@ private:
 public:
     Sizemes(Geometry* cls1);
     ~Sizemes();
-    void SetNewSizeValue(G4UIcommand* cmd1, G4String nbox_size);
+    void SetNewValue(G4UIcommand* cmd1, G4String nbox_size);
 };
 class Matmes : public G4UImessenger{
 private:
@@ -44,7 +44,7 @@ private:
 public:
     Matmes(Geometry* cls2);
     ~Matmes();
-    void SetNewMatValue(G4UIcommand* cmd2, G4String nmName);
+    void SetNewValue(G4UIcommand* cmd2, G4String nmName);
 
 };
 #endif //TEMPLATE_GEOMETRY_HH

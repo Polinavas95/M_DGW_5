@@ -35,7 +35,7 @@ private:
 public:
     Pormes(EventAction* cls4);
     ~Pormes();
-    void NewPorVal(G4UIcommand* cmd4, G4String nThreshold);
+    void SetNewValue(G4UIcommand* cmd4, G4String nThreshold);
 };
 
 

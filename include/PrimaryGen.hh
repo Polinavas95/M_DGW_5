@@ -30,7 +30,7 @@ private:
 public:
     Vectormes(PrimaryGen* cls5);
     ~Vectormes();
-    void SetNewVector(G4UIcommand* cmd5, G4String npos_vect);
+    void SetNewValue(G4UIcommand* cmd5, G4String npos_vect);
 };
 
 #endif //TEMPLATE_PRIMARYGEN_HH

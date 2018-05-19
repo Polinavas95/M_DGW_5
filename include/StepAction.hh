@@ -13,6 +13,7 @@
 
 class EventAction;
 class Namemes;
+
 class StepAction : public G4UserSteppingAction{
 private:
     G4String pName;
@@ -32,7 +33,7 @@ private:
 public:
     Namemes(StepAction* cls3);
     ~Namemes();
-    void SetNewName(G4UIcommand* cmd3, G4String npName);
+    void SetNewValue(G4UIcommand* cmd3, G4String npName);
 };
 
 
